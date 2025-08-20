@@ -1,0 +1,9 @@
+# ninja log v6
+2	290	7773835356425017	build.ninja	8d38a51e14d62f3
+2	290	7773835356326408	C:/Users/Stepan/CLionProjects/untitled/cmake-build-debug/cmake_install.cmake	8d38a51e14d62f3
+4	622	7773280450066774	src/CMakeFiles/logger.dir/FileLogger.cpp.obj	b8d1e102c8f6bb76
+7	806	7773280450097470	TestApp/CMakeFiles/testApp.dir/TestApp.cpp.obj	2330a63aba5168e8
+2	12	7773280449338267	clean	71dcc95b78e0ef7d
+626	721	7773280457155604	src/liblogger.dll	852f17213c654798
+626	721	7773280457155604	src/liblogger.dll.a	852f17213c654798
+806	939	7773280458077312	TestApp/testApp.exe	d8b62b707797de4

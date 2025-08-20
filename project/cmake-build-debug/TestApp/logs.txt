@@ -1,0 +1,4 @@
+2025-08-19.22:08:18| information| Input: 5 + 5
+2025-08-19.22:08:21| information| Input: 2 / 1
+2025-08-19.22:08:25| information| Input: 2 * 5
+2025-08-19.22:08:33| error| Error during calculating: error 6 / 0

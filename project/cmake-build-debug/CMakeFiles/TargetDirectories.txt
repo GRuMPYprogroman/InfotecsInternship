@@ -1,0 +1,10 @@
+C:/Users/Stepan/CLionProjects/untitled/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Stepan/CLionProjects/untitled/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Stepan/CLionProjects/untitled/cmake-build-debug/src/CMakeFiles/logger.dir
+C:/Users/Stepan/CLionProjects/untitled/cmake-build-debug/src/CMakeFiles/edit_cache.dir
+C:/Users/Stepan/CLionProjects/untitled/cmake-build-debug/src/CMakeFiles/rebuild_cache.dir
+C:/Users/Stepan/CLionProjects/untitled/cmake-build-debug/TestApp/CMakeFiles/testApp.dir
+C:/Users/Stepan/CLionProjects/untitled/cmake-build-debug/TestApp/CMakeFiles/edit_cache.dir
+C:/Users/Stepan/CLionProjects/untitled/cmake-build-debug/TestApp/CMakeFiles/rebuild_cache.dir
+C:/Users/Stepan/CLionProjects/untitled/cmake-build-debug/tests/CMakeFiles/edit_cache.dir
+C:/Users/Stepan/CLionProjects/untitled/cmake-build-debug/tests/CMakeFiles/rebuild_cache.dir
