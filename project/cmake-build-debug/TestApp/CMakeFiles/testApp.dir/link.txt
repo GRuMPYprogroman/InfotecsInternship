@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/testApp.dir/TestApp.cpp.o -o testApp  -Wl,-rpath,/home/stepan/Desktop/InfotecsInternship/project/cmake-build-debug/src ../src/liblogger.so 

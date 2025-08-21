@@ -7,7 +7,7 @@
 #include "../include/Utilities/PortableClock.h"
 
 namespace InfotecsLogger {
-    void FileLogger::Log(std::string& message, std::optional<LogLevel> logLevel, std::optional<EventId> eventId) {
+    void FileLogger::Log(const std::string& message, std::optional<LogLevel> logLevel, std::optional<EventId> eventId) {
         if (!logLevel.has_value())
             logLevel.value() = _minimumLogLevel;
         

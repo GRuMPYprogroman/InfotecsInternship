@@ -12,7 +12,7 @@ namespace InfotecsLogger {
     class ILogger{
     public:
         virtual bool  IsEnabled(LogLevel logLevel) = 0;
-        virtual void Log(std::string& message, 
+        virtual void Log(const std::string& message, 
                          std::optional<LogLevel> logLevel = std::nullopt, 
                          std::optional<EventId> = std::nullopt) = 0;
         virtual ~ILogger() = default;

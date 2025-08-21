@@ -11,6 +11,7 @@ add_subdirectory(src)
 
 # The executable code is here
 add_subdirectory(TestApp)
+add_subdirectory(TestSocketApp)
 
 # Testing only available if this is the main app
 if((CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)

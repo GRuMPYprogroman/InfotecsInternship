@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/Client.dir/Client.cpp.o -o Client  -Wl,-rpath,/home/stepan/Desktop/InfotecsInternship/project/cmake-build-debug/src ../src/liblogger.so 

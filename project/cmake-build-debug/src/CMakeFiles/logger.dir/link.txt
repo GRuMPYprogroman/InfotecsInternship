@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -shared -Wl,-soname,liblogger.so -o liblogger.so CMakeFiles/logger.dir/FileLogger.cpp.o CMakeFiles/logger.dir/SocketLogger.cpp.o 

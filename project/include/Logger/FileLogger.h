@@ -17,7 +17,7 @@ namespace InfotecsLogger {
         _minimumLogLevel(minumumLogLevel),
         _filePath(std::move(filePath)){};
         
-        void Log(std::string& message, std::optional<LogLevel> logLevel, std::optional<EventId>) override;
+        void Log(const std::string& message, std::optional<LogLevel> logLevel, std::optional<EventId>) override;
         bool  IsEnabled(LogLevel logLevel) override;
         void ChangeLogLevel(LogLevel newLogLevel);
     };
