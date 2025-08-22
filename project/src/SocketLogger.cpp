@@ -23,7 +23,7 @@ namespace InfotecsLogger {
             if (eventId.has_value())
                 outputMessage += eventId->Id + ": " + (eventId->Name.has_value() ? eventId->Name.value() + " " : " ");
             
-            outputMessage += message;
+            outputMessage += message + "\n";
             
             send(_clientSocket, outputMessage.c_str(), outputMessage.size(), 0);
         }

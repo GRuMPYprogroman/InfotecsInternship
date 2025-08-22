@@ -10,6 +10,8 @@
 #include <thread>
 #include <mutex>
 
+#define MAX_CONNECTIONS 5
+
 struct LogMessage {
     std::chrono::system_clock::time_point timestamp;
     std::string level;
@@ -88,7 +90,7 @@ void handleClient(int clientSocket) {
     std::string leftover;
 
     while (true) {
-        int bytesRead = recv(clientSocket, buffer, sizeof(buffer), 0);
+        ssize_t bytesRead = recv(clientSocket, buffer, sizeof(buffer), 0);
         if (bytesRead <= 0) break; // client disconnected
 
         leftover.append(buffer, bytesRead);
@@ -152,15 +154,16 @@ int main(int argc, char* argv[]) {
     address.sin_port = htons(port);
 
     if (bind(server_fd, (sockaddr*)&address, sizeof(address)) < 0) { perror("bind"); exit(EXIT_FAILURE); }
-    if (listen(server_fd, 5) < 0) { perror("listen"); exit(EXIT_FAILURE); }
+    if (listen(server_fd, MAX_CONNECTIONS) < 0) { perror("listen"); exit(EXIT_FAILURE); }
 
-    std::cout << "Server listening on port " << port << "...\n";
+    std::cout << "Server listening on sppport " << port << "...\n";
 
     while (true) {
         int clientSocket = accept(server_fd, (sockaddr*)&address, (socklen_t*)&addrlen);
         if (clientSocket < 0) { perror("accept"); continue; }
 
         std::thread(handleClient, clientSocket).detach();
+        std::cout << "launched new socket with descriptor: " << clientSocket << std::endl;
     }
 
     close(server_fd);
