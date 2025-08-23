@@ -8,6 +8,8 @@
 
 
 namespace InfotecsLogger {
+
+    // builds output depending on what parametrs are set
     void SocketLogger::Log(const std::string &message, std::optional<LogLevel> logLevel, std::optional<EventId> eventId)
     {
         if (!logLevel.has_value())
@@ -29,6 +31,7 @@ namespace InfotecsLogger {
         }
     }
 
+    // returns true if logLevel is enabled
     bool SocketLogger::IsEnabled(LogLevel logLevel) {
         return logLevel >= _minimumLogLevel;
     }

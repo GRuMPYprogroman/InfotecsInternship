@@ -20,7 +20,7 @@ namespace InfotecsLogger {
                                 _minimumLogLevel(minumumLogLevel),
                                 _clientSocket(clientSocket){};
 
-            virtual bool  IsEnabled(LogLevel logLevel) override;
+            virtual bool IsEnabled(LogLevel logLevel) override;
             virtual void Log(const std::string& message, 
                             std::optional<LogLevel> logLevel = std::nullopt, 
                             std::optional<EventId> = std::nullopt) override;

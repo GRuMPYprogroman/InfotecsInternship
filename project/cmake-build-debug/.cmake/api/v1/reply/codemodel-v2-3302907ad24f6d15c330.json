@@ -10,7 +10,8 @@
 					[
 						1,
 						2,
-						3
+						3,
+						4
 					],
 					"jsonFile" : "directory-.-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
@@ -65,6 +66,21 @@
 						0,
 						1
 					]
+				},
+				{
+					"build" : "tests",
+					"jsonFile" : "directory-tests-b01f6abb0ab61427ef3b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "tests",
+					"targetIndexes" : 
+					[
+						4
+					]
 				}
 			],
 			"name" : "",
@@ -76,7 +92,8 @@
 						0,
 						1,
 						2,
-						3
+						3,
+						4
 					],
 					"name" : "LoggerLibrary",
 					"targetIndexes" : 
@@ -84,7 +101,8 @@
 						0,
 						1,
 						2,
-						3
+						3,
+						4
 					]
 				}
 			],
@@ -100,7 +118,7 @@
 				{
 					"directoryIndex" : 3,
 					"id" : "Server::@ffbaaf096cdc70b26ffd",
-					"jsonFile" : "target-Server-8d709d824bf76c6b6adb.json",
+					"jsonFile" : "target-Server-e66e89b5f7763206dc33.json",
 					"name" : "Server",
 					"projectIndex" : 0
 				},
@@ -116,6 +134,13 @@
 					"id" : "testApp::@aed151a7d6f907f039b1",
 					"jsonFile" : "target-testApp-387fcccb224007f8ac32.json",
 					"name" : "testApp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "unit_socket_tests::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-unit_socket_tests-323a46afc286d80790f0.json",
+					"name" : "unit_socket_tests",
 					"projectIndex" : 0
 				}
 			]

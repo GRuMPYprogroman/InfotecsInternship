@@ -97,14 +97,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/stepan/Desktop/InfotecsInternship/project/cmake-build-debug/CMakeFiles /home/stepan/Desktop/InfotecsInternship/project/cmake-build-debug//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /home/stepan/Desktop/InfotecsInternship/project/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/stepan/Desktop/InfotecsInternship/project/cmake-build-debug/CMakeFiles /home/stepan/Desktop/InfotecsInternship/project/cmake-build-debug/tests//CMakeFiles/progress.marks
+	cd /home/stepan/Desktop/InfotecsInternship/project/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/stepan/Desktop/InfotecsInternship/project/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /home/stepan/Desktop/InfotecsInternship/project/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/clean
 .PHONY : clean
 
 # The main clean target
@@ -113,83 +113,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/stepan/Desktop/InfotecsInternship/project/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/stepan/Desktop/InfotecsInternship/project/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/stepan/Desktop/InfotecsInternship/project/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named logger
+# Convenience name for target.
+tests/CMakeFiles/unit_socket_tests.dir/rule:
+	cd /home/stepan/Desktop/InfotecsInternship/project/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/unit_socket_tests.dir/rule
+.PHONY : tests/CMakeFiles/unit_socket_tests.dir/rule
 
-# Build rule for target.
-logger: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 logger
-.PHONY : logger
-
-# fast build rule for target.
-logger/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/logger.dir/build.make src/CMakeFiles/logger.dir/build
-.PHONY : logger/fast
-
-#=============================================================================
-# Target rules for targets named testApp
-
-# Build rule for target.
-testApp: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 testApp
-.PHONY : testApp
-
-# fast build rule for target.
-testApp/fast:
-	$(MAKE) $(MAKESILENT) -f TestApp/CMakeFiles/testApp.dir/build.make TestApp/CMakeFiles/testApp.dir/build
-.PHONY : testApp/fast
-
-#=============================================================================
-# Target rules for targets named Client
-
-# Build rule for target.
-Client: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Client
-.PHONY : Client
-
-# fast build rule for target.
-Client/fast:
-	$(MAKE) $(MAKESILENT) -f TestSocketApp/CMakeFiles/Client.dir/build.make TestSocketApp/CMakeFiles/Client.dir/build
-.PHONY : Client/fast
-
-#=============================================================================
-# Target rules for targets named Server
-
-# Build rule for target.
-Server: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Server
-.PHONY : Server
-
-# fast build rule for target.
-Server/fast:
-	$(MAKE) $(MAKESILENT) -f TestSocketApp/CMakeFiles/Server.dir/build.make TestSocketApp/CMakeFiles/Server.dir/build
-.PHONY : Server/fast
-
-#=============================================================================
-# Target rules for targets named unit_socket_tests
-
-# Build rule for target.
-unit_socket_tests: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 unit_socket_tests
+# Convenience name for target.
+unit_socket_tests: tests/CMakeFiles/unit_socket_tests.dir/rule
 .PHONY : unit_socket_tests
 
 # fast build rule for target.
 unit_socket_tests/fast:
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/unit_socket_tests.dir/build.make tests/CMakeFiles/unit_socket_tests.dir/build
+	cd /home/stepan/Desktop/InfotecsInternship/project/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/unit_socket_tests.dir/build.make tests/CMakeFiles/unit_socket_tests.dir/build
 .PHONY : unit_socket_tests/fast
+
+AppTests.o: AppTests.cpp.o
+.PHONY : AppTests.o
+
+# target to build an object file
+AppTests.cpp.o:
+	cd /home/stepan/Desktop/InfotecsInternship/project/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/unit_socket_tests.dir/build.make tests/CMakeFiles/unit_socket_tests.dir/AppTests.cpp.o
+.PHONY : AppTests.cpp.o
+
+AppTests.i: AppTests.cpp.i
+.PHONY : AppTests.i
+
+# target to preprocess a source file
+AppTests.cpp.i:
+	cd /home/stepan/Desktop/InfotecsInternship/project/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/unit_socket_tests.dir/build.make tests/CMakeFiles/unit_socket_tests.dir/AppTests.cpp.i
+.PHONY : AppTests.cpp.i
+
+AppTests.s: AppTests.cpp.s
+.PHONY : AppTests.s
+
+# target to generate assembly for a file
+AppTests.cpp.s:
+	cd /home/stepan/Desktop/InfotecsInternship/project/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/unit_socket_tests.dir/build.make tests/CMakeFiles/unit_socket_tests.dir/AppTests.cpp.s
+.PHONY : AppTests.cpp.s
 
 # Help Target
 help:
@@ -200,11 +173,10 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... Client"
-	@echo "... Server"
-	@echo "... logger"
-	@echo "... testApp"
 	@echo "... unit_socket_tests"
+	@echo "... AppTests.o"
+	@echo "... AppTests.i"
+	@echo "... AppTests.s"
 .PHONY : help
 
 
@@ -216,6 +188,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/stepan/Desktop/InfotecsInternship/project/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

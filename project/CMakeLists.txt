@@ -14,8 +14,8 @@ add_subdirectory(TestApp)
 add_subdirectory(TestSocketApp)
 
 # Testing only available if this is the main app
-if((CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
-        AND BUILD_TESTING)
+if((CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME))
     add_subdirectory(tests)
+    enable_testing()
 endif()
 

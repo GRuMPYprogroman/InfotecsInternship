@@ -2,6 +2,7 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <unistd.h>
+#include <Parser.h>
 #include <chrono>
 #include <map>
 #include <vector>
@@ -10,14 +11,9 @@
 #include <thread>
 #include <mutex>
 
-#define MAX_CONNECTIONS 5
+using namespace Parser;
 
-struct LogMessage {
-    std::chrono::system_clock::time_point timestamp;
-    std::string level;
-    std::string text;
-    size_t length;
-};
+#define MAX_CONNECTIONS 5
 
 struct Statistics {
     size_t totalMessages = 0;
@@ -36,19 +32,6 @@ int N_MESSAGES = 0;
 int T_SECONDS = 0;
 int countSinceLastPrint = 0;
 std::chrono::system_clock::time_point lastPrint;
-
-// --- Functions ---
-LogMessage parseMessage(const std::string& msg) {
-    LogMessage log;
-    size_t first = msg.find('|');
-    size_t second = msg.find('|', first + 1);
-
-    log.level = msg.substr(first + 2, second - (first + 2));
-    log.text = msg.substr(second + 2);
-    log.length = log.text.size();
-    log.timestamp = std::chrono::system_clock::now();
-    return log;
-}
 
 void updateStatistics(const LogMessage& log) {
     std::lock_guard<std::mutex> lock(statsMutex);

@@ -1,0 +1,3 @@
+add_executable(unit_socket_tests AppTests.cpp)
+target_link_libraries(unit_socket_tests PRIVATE gtest gtest_main logger)
+add_test(NAME unit_socket_tests COMMAND unit_socket_tests)

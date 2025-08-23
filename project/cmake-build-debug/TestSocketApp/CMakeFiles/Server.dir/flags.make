@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/home/stepan/Desktop/InfotecsInternship/project/TestSocketApp/../include/Utilities
 
 CXX_FLAGS = -std=gnu++17
 

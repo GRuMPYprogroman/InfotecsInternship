@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/unit_socket_tests.dir/AppTests.cpp.o -o unit_socket_tests  -Wl,-rpath,/home/stepan/Desktop/InfotecsInternship/project/cmake-build-debug/src -lgtest -lgtest_main ../src/liblogger.so 

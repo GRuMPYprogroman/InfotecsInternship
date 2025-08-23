@@ -7,13 +7,14 @@
 #include <condition_variable>
 #include <optional>
 #include <atomic>
-
 #include "ILogger.h"
 #include "FileLogger.h"
 #include "AppLogEvents.h"
+#include "Calculator.h"
 
 using namespace InfotecsLogger;
 using namespace AppLogEvents;
+using namespace SimpleCalculator;
 
 struct LogTask {
     std::string message;
@@ -51,28 +52,6 @@ public:
         _cond.notify_all();
     }
 };
-
-// Simple calculator
-bool evaluateExpression(const std::string& expr, double& result) {
-    std::istringstream iss(expr);
-    double a, b;
-    char op;
-    if (!(iss >> a)) return false;
-    if (!(iss >> op)) return false;
-    if (!(iss >> b)) return false;
-
-    switch (op) {
-        case '+': result = a + b; break;
-        case '-': result = a - b; break;
-        case '*': result = a * b; break;
-        case '/':
-            if (b == 0) return false;
-            result = a / b;
-            break;
-        default: return false;
-    }
-    return true;
-}
 
 int main(int argc, char* argv[]) {
     if (argc < 3) {
